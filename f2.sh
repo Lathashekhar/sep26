@@ -3,6 +3,9 @@ echo "Enter your salary:"
 read salary
 if [ "$salary" -lt 30000 ]; then
    echo "No tax"
+elif [ "$salary" -eq 30000 ]; then
+     tax=$(echo "$salary * 0.05")
+    echo "Tax is 5%: $tax"
 elif [ "$salary" -gt 30000 ] && [ "$salary" -le 40000 ]; then
      tax=$(echo "$salary * 0.10")
      echo "Tax is 10%: $tax"
